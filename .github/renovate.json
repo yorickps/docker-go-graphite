@@ -1,0 +1,24 @@
+{
+  "dryRun": "full",
+  "username": "renovate-release",
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "onboarding": false,
+  "platform": "github",
+  "includeForks": true,
+  "repositories": [
+    "renovatebot/github-action"
+  ],
+  "rebaseWhen": "conflicted",
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "enabled": true,
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}
