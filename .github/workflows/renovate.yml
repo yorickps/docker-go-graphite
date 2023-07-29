@@ -1,0 +1,27 @@
+name: Renovate
+
+on: 
+  schedule:
+    - cron: '0 4,5 * * *'
+  workflow_dispatch:
+
+concurrency: renovate
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+
+      - name: Validate Renovate JSON
+        run: jq type .github/renovate.json
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v39.0.1
+        with:
+          renovate-version: full
+          token: RENOVATE_TOKEN
+          configurationFile: .github/renovate.json
+        env:
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
