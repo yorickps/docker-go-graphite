@@ -16,9 +16,8 @@
       "matchDatasources": [
         "docker"
       ],
-      "matchUpdateTypes": [
-        "major"
-      ]
+      "matchManagers": [],
+      "versionning": "semver"
     }
   ]
 }
