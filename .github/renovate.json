@@ -6,7 +6,6 @@
   "platform": "github",
   "includeForks": true,
   "repositories": [
-    "renovatebot/github-action"
   ],
   "rebaseWhen": "conflicted",
   "labels": ["dependencies"],
